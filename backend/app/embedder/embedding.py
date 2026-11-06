@@ -1,14 +1,14 @@
 import logging
 
+from fastapi import Request
 from sentence_transformers import SentenceTransformer
 
-from backend.app.exceptions import EmbeddingError
+from backend.app.core.exceptions.exceptions import EmbeddingError
 
 logger = logging.getLogger(__name__)
 
-def generate_embedding(chunks: list[str]):
+def generate_embedding(chunks: list[str], model):
     try:
-        model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
         emebeddings = model.encode(
             chunks,
