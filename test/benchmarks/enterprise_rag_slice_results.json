@@ -1,22 +1,1169 @@
 {
-  "Vector Only": {
-    "avg_recall": 1.0,
-    "avg_fact_score": 0.866,
-    "avg_latency_sec": 4.41
+  "overall_summary": {
+    "Vector Only": {
+      "avg_recall": 0.994,
+      "avg_fact_score": 0.73,
+      "avg_latency_sec": 5.57
+    },
+    "FTS Only": {
+      "avg_recall": 0.982,
+      "avg_fact_score": 0.775,
+      "avg_latency_sec": 7.11
+    },
+    "Hybrid (RRF)": {
+      "avg_recall": 0.963,
+      "avg_fact_score": 0.751,
+      "avg_latency_sec": 4.81
+    },
+    "Hybrid + Graph": {
+      "avg_recall": 0.963,
+      "avg_fact_score": 0.774,
+      "avg_latency_sec": 12.06
+    }
   },
-  "FTS Only": {
-    "avg_recall": 0.0,
-    "avg_fact_score": 0.0,
-    "avg_latency_sec": 2.52
+  "category_summary": {
+    "basic": {
+      "count": 5,
+      "vector_fact_score": 0.95,
+      "fts_fact_score": 0.95,
+      "hybrid_fact_score": 1.0,
+      "graph_fact_score": 1.0
+    },
+    "completeness": {
+      "count": 5,
+      "vector_fact_score": 0.524,
+      "fts_fact_score": 0.532,
+      "hybrid_fact_score": 0.55,
+      "graph_fact_score": 0.566
+    },
+    "conflicting_info": {
+      "count": 2,
+      "vector_fact_score": 0.875,
+      "fts_fact_score": 0.81,
+      "hybrid_fact_score": 0.81,
+      "graph_fact_score": 0.81
+    },
+    "constrained": {
+      "count": 6,
+      "vector_fact_score": 0.893,
+      "fts_fact_score": 0.983,
+      "hybrid_fact_score": 0.96,
+      "graph_fact_score": 0.948
+    },
+    "intra_document_reasoning": {
+      "count": 3,
+      "vector_fact_score": 0.667,
+      "fts_fact_score": 0.833,
+      "hybrid_fact_score": 0.833,
+      "graph_fact_score": 0.833
+    },
+    "project_related": {
+      "count": 3,
+      "vector_fact_score": 0.297,
+      "fts_fact_score": 0.363,
+      "hybrid_fact_score": 0.413,
+      "graph_fact_score": 0.347
+    },
+    "semantic": {
+      "count": 4,
+      "vector_fact_score": 0.77,
+      "fts_fact_score": 0.797,
+      "hybrid_fact_score": 0.54,
+      "graph_fact_score": 0.75
+    }
   },
-  "Hybrid (RRF)": {
-    "avg_recall": 1.0,
-    "avg_fact_score": 0.866,
-    "avg_latency_sec": 3.03
-  },
-  "Hybrid + Graph": {
-    "avg_recall": 1.0,
-    "avg_fact_score": 0.866,
-    "avg_latency_sec": 11.29
-  }
+  "question_results": [
+    {
+      "question_id": "qst_0011",
+      "question_type": "basic",
+      "question": "How long is the validity period for the telemetry driven runbook author certification from the operator training bootcamp?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 1.7,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.12,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 1.76,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 8.22,
+          "retrieved_chunk_count": 96,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0021",
+      "question_type": "basic",
+      "question": "What is the expected turnaround time for security to approve access to a high risk internal tool role in Redwood's tool access governance process?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 2.44,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.64,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 2.01,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 7.44,
+          "retrieved_chunk_count": 112,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0059",
+      "question_type": "basic",
+      "question": "In the incident where a CI runner service token was suspected of being used from two different datacenter IP ranges minutes apart, what time window did the team decide to audit for artifact uploads and repository pushes?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 1.83,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 2.57,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 1.7,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 6.78,
+          "retrieved_chunk_count": 100,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0076",
+      "question_type": "basic",
+      "question": "Why are some newly created Okta provisioned users getting a 403 when accessing the model observability metrics or dashboard, and what was the underlying type mismatch causing the missing role mapping?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.64,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 5.26,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.64,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 9.1,
+          "retrieved_chunk_count": 90,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0151",
+      "question_type": "basic",
+      "question": "Why did the 3am nightly release pipeline stop uploading build artifacts to the internal S3 style storage after a security sudo policy update?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.75,
+          "latency_sec": 3.75,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.75,
+          "latency_sec": 5.56,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.33,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 10.89,
+          "retrieved_chunk_count": 95,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0179",
+      "question_type": "semantic",
+      "question": "What caused an enterprise tenant in Western Europe to suddenly get routed to a Southeast Asia edge during a short mid March 2026 load spike on the vectorization service, adding about 200ms and triggering ingestion timeouts, even though the tenant was supposed to stay in Europe?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.52,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.86,
+          "latency_sec": 6.7,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.86,
+          "latency_sec": 4.23,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 11.21,
+          "retrieved_chunk_count": 96,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0181",
+      "question_type": "semantic",
+      "question": "During a large overnight upload run using short lived credentials refreshed by many transient workers, what client side scheduling change was recommended to stop periodic too many requests errors after a partial worker restart caused refresh bursts?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.75,
+          "latency_sec": 2.82,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.36,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 1.84,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 7.65,
+          "retrieved_chunk_count": 82,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0191",
+      "question_type": "semantic",
+      "question": "During a short surge in vector writes last March, a customer in the western US region saw search answers point to the wrong source records and also couldnt verify charges because telemetry for about twenty minutes never arrived; what was the suspected technical cause behind both symptoms?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.33,
+          "latency_sec": 4.22,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.33,
+          "latency_sec": 4.83,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.0,
+          "latency_sec": 4.28,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.0,
+          "latency_sec": 14.29,
+          "retrieved_chunk_count": 115,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0215",
+      "question_type": "semantic",
+      "question": "On managed iPhones on corporate Wi-Fi, why do long-lived server push text streams sometimes reconnect after the app is backgrounded and then end with a few seconds of silence and a cut-off final JSON fragment instead of a clean end marker?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 5.25,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 8.45,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.8,
+          "latency_sec": 6.01,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 13.51,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0318",
+      "question_type": "intra_document_reasoning",
+      "question": "For the Mapflow incident where a segmented batch embedding job caused a negative provisional balance and autopay to be paused, what was the job start time and what date is the full rollout of the permanent ordering-resilient hourly aggregator fix scheduled for?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 2.02,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.14,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 1.78,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 7.27,
+          "retrieved_chunk_count": 95,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0327",
+      "question_type": "intra_document_reasoning",
+      "question": "In the Unified Inference Consumption Paradigm overview, what are the two unit primitives used for billing, and where is the referenced Confluence file that contains the pricing catalog and token definitions for them?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 2.64,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 3.77,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 2.51,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 7.89,
+          "retrieved_chunk_count": 95,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0331",
+      "question_type": "intra_document_reasoning",
+      "question": "In the incident where Meridian Analytics saw pinned sessions revert to the fallback variant during a tiered canary in us-east, which model rollout was affected and what type of customer contract did they have?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 2.88,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 2.93,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 1.44,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 6.39,
+          "retrieved_chunk_count": 97,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0341",
+      "question_type": "project_related",
+      "question": "For the Proxima Bank 429 spike after priority routing rollout, what caused the throttling and what temporary policy exception did we apply, and how do we verify it is not burning the enterprise route SLOs?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.7,
+          "latency_sec": 8.04,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.7,
+          "latency_sec": 12.49,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.6,
+          "latency_sec": 8.94,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.8,
+          "latency_sec": 18.53,
+          "retrieved_chunk_count": 100,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0353",
+      "question_type": "project_related",
+      "question": "Before we re-enable paging and hook perf-canary into rollout gates, what exact baseline key, min-sample requirements, and incident-bot dedupe key should we enforce to avoid another false-positive alert storm?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.14,
+          "latency_sec": 11.3,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.14,
+          "latency_sec": 17.47,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.14,
+          "latency_sec": 10.46,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.14,
+          "latency_sec": 14.71,
+          "retrieved_chunk_count": 76,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0358",
+      "question_type": "project_related",
+      "question": "Finance is seeing QTD blended $/1M output tokens jump. How do we verify whether its a rate card change or a streaming output token undercount, and what is the backfill and escalation path?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.05,
+          "latency_sec": 14.38,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.25,
+          "latency_sec": 16.23,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 15.25,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.1,
+          "latency_sec": 33.73,
+          "retrieved_chunk_count": 115,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0381",
+      "question_type": "constrained",
+      "question": "In the planned controlled failover game day on 2026-01-15 (Hosted API us-east \u2192 eu-west), what caused the routing automation to oscillate (flip/rollback), and what follow-up ticket and target ship date were created to fix the streaming disconnect/reconnect behavior clients saw during cross-region redirects?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.63,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.9,
+          "latency_sec": 5.91,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.9,
+          "latency_sec": 3.02,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.9,
+          "latency_sec": 8.5,
+          "retrieved_chunk_count": 95,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0382",
+      "question_type": "constrained",
+      "question": "In the Feb 12, 2026 incident where daily usage exports briefly overstated output tokens (while invoices stayed correct), what was the root cause and what mitigation + follow-up steps were taken to prevent a repeat?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.07,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.43,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.38,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.93,
+          "latency_sec": 9.42,
+          "retrieved_chunk_count": 115,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0383",
+      "question_type": "constrained",
+      "question": "In a Private/VPC deployment, some users could complete SAML SSO but then immediately hit 403s because their admin group wasn't being recognized after an IdP/AD-connector upgrade (early March 2026). What was the underlying parsing problem with the comma-separated \"groups\" SAML attribute (why the first group didn't match), and what server-side patch fixed it?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.95,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 5.78,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.08,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 9.6,
+          "retrieved_chunk_count": 102,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0393",
+      "question_type": "constrained",
+      "question": "After the March 9, 2026 embedding-catalog promotion that made a 1024-d embedding model the default, a dedicated Hosted API tenant (us-west with eu-west failover) saw /v1/rerank start timing out with 512-vs-1024 vector length mismatches when using the alias open-embed-default. What was the confirmed root cause, and what short-term mitigation and permanent fix did we deploy?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 5.75,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 6.39,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.46,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 12.37,
+          "retrieved_chunk_count": 101,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0397",
+      "question_type": "constrained",
+      "question": "In the March 2025 incident where eu-west-1 ran short on GPUs and the router temporarily failed eligible traffic over to us-east-1, what conditions/thresholds triggered enabling region fallback and which traffic was excluded? Also, per the region pinning policy, what kinds of request/response data are considered 'customer content' that must stay in-region for residency-strict traffic?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 9.59,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 8.49,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 6.89,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 11.28,
+          "retrieved_chunk_count": 97,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0404",
+      "question_type": "constrained",
+      "question": "We saw quality regressions after enabling an INT8/mixed-precision variant and suspect KV-cache rounding on long-context requests. What request header can we set as a quick mitigation to bypass the KV cache, and in the dynamic quant handoff policy for the interactive-chat route what minimum KV-cache hit-rate and max sequence length are required before routing to a quant variant?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.86,
+          "latency_sec": 3.24,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 4.24,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.86,
+          "latency_sec": 3.1,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.86,
+          "latency_sec": 11.17,
+          "retrieved_chunk_count": 95,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0413",
+      "question_type": "conflicting_info",
+      "question": "Who approves terminating STALE-ORPHAN test instances after the 72h grace window-infra manager or cost-ops?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.75,
+          "latency_sec": 2.99,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.62,
+          "latency_sec": 4.07,
+          "retrieved_chunk_count": 2,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 0.62,
+          "latency_sec": 2.78,
+          "retrieved_chunk_count": 27,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 0.62,
+          "latency_sec": 13.84,
+          "retrieved_chunk_count": 29,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0421",
+      "question_type": "conflicting_info",
+      "question": "Default TTL for the cross-account GPU warm-pool handoff handshake token?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 3.07,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 0.5,
+          "correctness_score": 1.0,
+          "latency_sec": 2.45,
+          "retrieved_chunk_count": 3,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 1.91,
+          "retrieved_chunk_count": 28,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 6.08,
+          "retrieved_chunk_count": 48,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0431",
+      "question_type": "completeness",
+      "question": "What is the procedure for an emergency rollback of a Serving Runtime release (Hosted and Dedicated)?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 10.22,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.83,
+          "latency_sec": 10.17,
+          "retrieved_chunk_count": 2,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 7.83,
+          "retrieved_chunk_count": 27,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 1.0,
+          "correctness_score": 1.0,
+          "latency_sec": 14.28,
+          "retrieved_chunk_count": 46,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0433",
+      "question_type": "completeness",
+      "question": "What is Redwood Inference's end-to-end process for rotating secrets and credentials used by production services (including emergency rotation)?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 0.83,
+          "correctness_score": 0.5,
+          "latency_sec": 12.88,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.83,
+          "latency_sec": 17.39,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 0.83,
+          "correctness_score": 0.5,
+          "latency_sec": 12.25,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 0.83,
+          "correctness_score": 0.58,
+          "latency_sec": 17.94,
+          "retrieved_chunk_count": 103,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0435",
+      "question_type": "completeness",
+      "question": "How many weekly status updates for Project Orion marked the project as 'At Risk'?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.0,
+          "latency_sec": 2.32,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.0,
+          "latency_sec": 3.33,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 0.83,
+          "correctness_score": 0.0,
+          "latency_sec": 1.79,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 0.83,
+          "correctness_score": 0.0,
+          "latency_sec": 7.54,
+          "retrieved_chunk_count": 95,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0442",
+      "question_type": "completeness",
+      "question": "What is Redwood Inference's end-to-end process for making a production change (definition, required approvals, pre-deploy verification, deploy execution, customer/internal communications, and rollback/post-change requirements) for the Hosted API and Console?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.37,
+          "latency_sec": 17.42,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 19.26,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 0.62,
+          "correctness_score": 0.5,
+          "latency_sec": 11.15,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 0.62,
+          "correctness_score": 0.5,
+          "latency_sec": 24.92,
+          "retrieved_chunk_count": 94,
+          "graph_hit": false
+        }
+      }
+    },
+    {
+      "question_id": "qst_0449",
+      "question_type": "completeness",
+      "question": "In March 2026, which deployment offering-Hosted API, Dedicated, or Private-had the most customer support escalations where the primary symptom was request timeouts?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.75,
+          "latency_sec": 3.34,
+          "retrieved_chunk_count": 25,
+          "graph_hit": false
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "doc_recall": 1.0,
+          "correctness_score": 0.5,
+          "latency_sec": 6.71,
+          "retrieved_chunk_count": 50,
+          "graph_hit": false
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "doc_recall": 0.67,
+          "correctness_score": 0.75,
+          "latency_sec": 3.74,
+          "retrieved_chunk_count": 75,
+          "graph_hit": false
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "doc_recall": 0.67,
+          "correctness_score": 0.75,
+          "latency_sec": 13.08,
+          "retrieved_chunk_count": 96,
+          "graph_hit": false
+        }
+      }
+    }
+  ]
 }
