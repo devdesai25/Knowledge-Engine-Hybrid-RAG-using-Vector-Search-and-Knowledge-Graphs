@@ -15,3 +15,9 @@ class GenerationError(Exception):
 
 class LLMTimeoutError(Exception):
     pass
+
+class LLMLengthFinishError(Exception):
+    pass
+
+class DeletionError(Exception):
+    pass
