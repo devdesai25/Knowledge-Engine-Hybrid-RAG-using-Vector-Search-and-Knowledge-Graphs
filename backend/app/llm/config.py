@@ -2,9 +2,9 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class GenerationConfig:
-    model: str = "gemini-3-flash-preview"
+    model: str = "deepseek-flash"
     temperature: float = 0.2
-    max_output_tokens: int = 1024
+    max_output_tokens: int = 5120
     top_p: float = 0.95
 
     system_instruction: str = (
@@ -16,3 +16,18 @@ class GenerationConfig:
         "Do not reveal information from outside the provided context, "
         "even if you know it from general knowledge."
     )
+
+    graph_system_instruction: str = (
+            """
+            You are a cypher query generator.
+            
+            You are given a user's natural language question and the available Neo4j graph Schema.
+
+            Generate a read-only Cypher query that retrieves the information necessary to answer the question. 
+            
+            Use parameters rather than interpolating user values directly.
+            
+            Do not modify the database.
+
+            """
+        )
