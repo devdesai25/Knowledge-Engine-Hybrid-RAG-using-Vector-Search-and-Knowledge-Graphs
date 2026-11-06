@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import re
 from time import perf_counter
 from uuid import UUID
 from collections import defaultdict
@@ -80,6 +81,27 @@ async def fts_search(query, user_id: UUID, db: AsyncSession):
     db_start = perf_counter()
     result = await db.execute(stmt)
     rows = result.all()
+    if not rows:
+        # Fallback for natural language queries: if strict AND matched 0 rows,
+        # extract keywords and match via OR ranking
+        words = [w for w in re.findall(r'[a-zA-Z0-9]+', query.query) if len(w) > 2]
+        if words:
+            try:
+                or_tsquery = func.to_tsquery("english", " | ".join(words))
+                stmt_fallback = (
+                    select(
+                        Chunk,
+                        func.ts_rank_cd(Chunk.fts, or_tsquery).label("score")
+                    )
+                    .where(Chunk.fts.op("@@")(or_tsquery))
+                    .where(Chunk.user_id == user_id)
+                    .order_by(func.ts_rank_cd(Chunk.fts, or_tsquery).desc())
+                    .limit(50)
+                )
+                res_fallback = await db.execute(stmt_fallback)
+                rows = res_fallback.all()
+            except Exception as e:
+                logger.debug("FTS fallback to_tsquery error: %s", e)
     db_time = perf_counter() - db_start
 
     results = []

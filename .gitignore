@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Benchmark raw data
+*.zip
+test/benchmarks/data/
