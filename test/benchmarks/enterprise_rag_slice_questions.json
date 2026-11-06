@@ -1,0 +1,87 @@
+[
+  {
+    "question_id": "qst_0021",
+    "question_type": "basic",
+    "source_types": [
+      "confluence"
+    ],
+    "question": "What is the expected turnaround time for security to approve access to a high risk internal tool role in Redwood's tool access governance process?",
+    "expected_doc_ids": [
+      "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+    ],
+    "gold_answer": "For high-risk roles requiring security review, the expected security approval turnaround time is 3 business days.",
+    "answer_facts": [
+      "For high-risk internal tool roles requiring security review in Redwood's tool access governance process, the expected security approval turnaround time is 3 business days."
+    ]
+  },
+  {
+    "question_id": "qst_0059",
+    "question_type": "basic",
+    "source_types": [
+      "jira"
+    ],
+    "question": "In the incident where a CI runner service token was suspected of being used from two different datacenter IP ranges minutes apart, what time window did the team decide to audit for artifact uploads and repository pushes?",
+    "expected_doc_ids": [
+      "dsid_9a088141571b435f995568199ec4bcc9"
+    ],
+    "gold_answer": "They decided to audit artifact uploads and git pushes between 2026-03-13T17:50Z and 2026-03-13T18:20Z.",
+    "answer_facts": [
+      "The team decided to audit artifact uploads and repository pushes between 2026-03-13T17:50Z and 2026-03-13T18:20Z."
+    ]
+  },
+  {
+    "question_id": "qst_0076",
+    "question_type": "basic",
+    "source_types": [
+      "jira"
+    ],
+    "question": "Why are some newly created Okta provisioned users getting a 403 when accessing the model observability metrics or dashboard, and what was the underlying type mismatch causing the missing role mapping?",
+    "expected_doc_ids": [
+      "dsid_b097ab5d9e4c41609f47432dfcb1508b"
+    ],
+    "gold_answer": "Some newly provisioned users receive a 403 because auth-service can't resolve any RBAC roles from their token's group claims, so ModelObservability denies access with \"no-matching-role-for-groups.\" The underlying issue is a type mismatch introduced by an Okta mapping update: the token now contains numeric (integer) group IDs (e.g., [123456]) but the role index and lookup logic expect group IDs as strings (e.g., \"123456\"), so the lookup returns an empty role set.",
+    "answer_facts": [
+      "Some newly provisioned Okta users get a 403 because auth-service cannot resolve any RBAC roles from the group claims in their token",
+      "When no RBAC roles are resolved from the token group claims, ModelObservability denies access with the reason no-matching-role-for-groups",
+      "The missing role mapping was caused by a type mismatch introduced by an Okta mapping update",
+      "After the mapping update, the token group claims contain numeric integer group IDs such as [123456]",
+      "The role index and lookup logic expect group IDs as strings such as \"123456\"",
+      "Because of the integer versus string mismatch, the role lookup returns an empty role set"
+    ]
+  },
+  {
+    "question_id": "qst_0151",
+    "question_type": "basic",
+    "source_types": [
+      "jira"
+    ],
+    "question": "Why did the 3am nightly release pipeline stop uploading build artifacts to the internal S3 style storage after a security sudo policy update?",
+    "expected_doc_ids": [
+      "dsid_259d17a11ddc4e28b559aa9fb1111270"
+    ],
+    "gold_answer": "The nightly pipeline's upload step runs `/usr/local/bin/artifact-uploader` via `sudo` to set up ephemeral credentials, but the tenant-wide Security change (SUDO-2026-031) removed the wildcard sudoers rule for the `ci-agent` group. As a result, `ci-agent` was no longer in sudoers, `sudo` returned \"permission denied,\" and the upload step exited with code 126.",
+    "answer_facts": [
+      "The nightly pipeline upload step runs /usr/local/bin/artifact-uploader via sudo to set up ephemeral credentials.",
+      "A tenant-wide security change (SUDO-2026-031) removed the wildcard sudoers rule for the ci-agent group.",
+      "After the security change, the ci-agent group was no longer allowed to use sudo.",
+      "Because ci-agent was not in sudoers, sudo returned permission denied and the upload step failed (exited with code 126), so artifacts were not uploaded."
+    ]
+  },
+  {
+    "question_id": "qst_0191",
+    "question_type": "semantic",
+    "source_types": [
+      "jira"
+    ],
+    "question": "During a short surge in vector writes last March, a customer in the western US region saw search answers point to the wrong source records and also couldnt verify charges because telemetry for about twenty minutes never arrived; what was the suspected technical cause behind both symptoms?",
+    "expected_doc_ids": [
+      "dsid_ef7f1d5cba204b728e1f4d7cddda7daa"
+    ],
+    "gold_answer": "The suspected cause was indexer pods in us-west-2 being OOM-killed during the high-ingest burst due to aggressive in-memory batching (made worse by a recent batch-size increase). When the process restarted, some commit batches weren't flushed/propagated to the replicated commit log and audit-log Kafka topic before ack, leading to incorrect vector\u2192doc-id mappings and a gap in billing/latency telemetry.",
+    "answer_facts": [
+      "Indexer pods in us-west-2 were OOM-killed during the high-ingest burst because aggressive in-memory batching used too much memory, worsened by a recent batch-size increase.",
+      "After the indexer process restarted, some commit batches were acknowledged before being flushed or propagated to the replicated commit log and the audit-log Kafka topic.",
+      "Those unflushed commits caused incorrect vector-to-document ID mappings and a gap in billing and latency telemetry for about twenty minutes."
+    ]
+  }
+]

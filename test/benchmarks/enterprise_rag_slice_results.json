@@ -1,0 +1,22 @@
+{
+  "Vector Only": {
+    "avg_recall": 1.0,
+    "avg_fact_score": 0.866,
+    "avg_latency_sec": 4.41
+  },
+  "FTS Only": {
+    "avg_recall": 0.0,
+    "avg_fact_score": 0.0,
+    "avg_latency_sec": 2.52
+  },
+  "Hybrid (RRF)": {
+    "avg_recall": 1.0,
+    "avg_fact_score": 0.866,
+    "avg_latency_sec": 3.03
+  },
+  "Hybrid + Graph": {
+    "avg_recall": 1.0,
+    "avg_fact_score": 0.866,
+    "avg_latency_sec": 11.29
+  }
+}

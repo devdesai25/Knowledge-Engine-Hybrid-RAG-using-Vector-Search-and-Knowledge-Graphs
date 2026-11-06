@@ -1,0 +1,109 @@
+[
+  {
+    "question_id": "complex_0001",
+    "challenge_type": "cross_statute_historical_link",
+    "title": "Cross-Statute Historical Evolution (BSA 2023 to Indian Evidence Act 1872)",
+    "question": "Which historic statute was repealed by the Bharatiya Sakshya Adhiniyam 2023, what category of law did it belong to, and which specific sections of that 1872 Act correspond to the definitions of 'Court' and the provisions on 'Motive, preparation and previous or subsequent conduct'?",
+    "expected_entities": [
+      "Sakshya Adhiniyam, 2023",
+      "Indian Evidence Act, 1872",
+      "adjective law",
+      "Act 1 of 1872",
+      "Court",
+      "Motive, preparation and previous or subsequent conduct",
+      "S. 7 of Act 1 of 1872"
+    ],
+    "gold_answer": "The Bharatiya Sakshya Adhiniyam 2023 repeals the Indian Evidence Act 1872 (Act 1 of 1872), which was categorized as an adjective law. In the cross-statute mapping, the definition of 'Court' corresponds to Section 3 of Act 1 of 1872, and the provision on 'Motive, preparation and previous or subsequent conduct' corresponds to Section 7 of Act 1 of 1872.",
+    "answer_facts": [
+      "The Sakshya Adhiniyam 2023 repeals the Indian Evidence Act 1872 (Act 1 of 1872).",
+      "The Indian Evidence Act 1872 is categorized as adjective law.",
+      "The definition of 'Court' corresponds to Section 3 of Act 1 of 1872.",
+      "The section on 'Motive, preparation and previous or subsequent conduct' corresponds to Section 7 of Act 1 of 1872."
+    ]
+  },
+  {
+    "question_id": "complex_0002",
+    "challenge_type": "exhaustive_structural_aggregation",
+    "title": "Exhaustive Chapter Schema & Relevancy Rules (Act 47 of 2023)",
+    "question": "Under Act 47 of 2023, what is Chapter II titled, and what specific sections and topics form this Chapter from Section 3 up through Section 8?",
+    "expected_entities": [
+      "Act 47 of 2023",
+      "CHAPTER II RELEVANCY OF FACTS",
+      "Evidence may be given of facts in issue and relevant facts",
+      "Relevancy of facts forming part of same transaction",
+      "Facts which are occasion, cause or effect of facts in issue or relevant facts",
+      "Motive, preparation and previous or subsequent conduct",
+      "Facts necessary to explain or introduce fact in issue or relevant facts",
+      "Things said or done by conspirator in reference to common design"
+    ],
+    "gold_answer": "Chapter II of Act 47 of 2023 is titled 'RELEVANCY OF FACTS'. It encompasses: Section 3 (Evidence may be given of facts in issue and relevant facts), Section 4 (Relevancy of facts forming part of same transaction), Section 5 (Facts which are occasion, cause or effect of facts in issue or relevant facts), Section 6 (Motive, preparation and previous or subsequent conduct), Section 7 (Facts necessary to explain or introduce fact in issue or relevant facts), and Section 8 (Things said or done by conspirator in reference to common design).",
+    "answer_facts": [
+      "Chapter II is titled 'RELEVANCY OF FACTS'.",
+      "Section 3 covers evidence of facts in issue and relevant facts.",
+      "Section 4 covers facts forming part of the same transaction.",
+      "Section 5 covers facts that are the occasion, cause or effect of facts in issue.",
+      "Section 6 covers motive, preparation, and previous or subsequent conduct.",
+      "Section 7 covers facts necessary to explain or introduce facts in issue.",
+      "Section 8 covers things said or done by a conspirator in reference to a common design."
+    ]
+  },
+  {
+    "question_id": "complex_0003",
+    "challenge_type": "hierarchical_governance_multi_hop",
+    "title": "Hierarchical Governance & Administrative Direction (Water Act 1974)",
+    "question": "In the administrative structure under the Water Act 1974, explain how a Joint Board relates to a State Board, and how both are bound or coordinated by the Central Board regarding directions, training, and functions.",
+    "expected_entities": [
+      "Joint Board",
+      "State Board",
+      "Central Board"
+    ],
+    "gold_answer": "Under the Water Act 1974, references to a State Board include a Joint Board unless the context requires otherwise. State Boards (and by extension Joint Boards) are bound by the written directions issued by the Central Board. Furthermore, the Central Board collaborates with State Boards in organising training of personnel and mass education programs, and may execute State Board functions in specified circumstances.",
+    "answer_facts": [
+      "References to State Board include Joint Board unless context indicates otherwise.",
+      "State Boards are legally bound by written directions of the Central Board.",
+      "The Central Board collaborates with State Boards to organise training of persons and mass education programs."
+    ]
+  },
+  {
+    "question_id": "complex_0004",
+    "challenge_type": "architectural_lifecycle_methods",
+    "title": "Distributed Systems: Complete BullyAlgorithm State & Lifecycle",
+    "question": "What is the complete set of operational and lifecycle methods exposed on the BullyAlgorithm class for node participation, failure, recovery, and inspection?",
+    "expected_entities": [
+      "BullyAlgorithm",
+      "election",
+      "fail_node",
+      "join_node",
+      "recover_node",
+      "show_status"
+    ],
+    "gold_answer": "The BullyAlgorithm class exposes a complete suite of lifecycle and operational methods: election (initiating leader election), fail_node (simulating a node failure), join_node (introducing a new node to the cluster), recover_node (re-activating a failed node), and show_status (inspecting the current state and leadership of the distributed system).",
+    "answer_facts": [
+      "The class includes the election method for leader election.",
+      "The class includes the fail_node method for handling node failure.",
+      "The class includes the join_node method for adding nodes.",
+      "The class includes the recover_node method for reviving failed nodes.",
+      "The class includes the show_status method for inspecting active system status."
+    ]
+  },
+  {
+    "question_id": "complex_0005",
+    "challenge_type": "compiler_pipeline_dependency",
+    "title": "Compiler Lab: Parsing Components & Tools Dependency",
+    "question": "In the compiler design lab implementations, what core data structures and tables does the LL(1) parser rely on, and what function bridges with YACC for grammar execution?",
+    "expected_entities": [
+      "LL(1) parser",
+      "parsing table",
+      "stack",
+      "input",
+      "yyparse",
+      "YACC"
+    ],
+    "gold_answer": "The LL(1) parser implementation relies on three fundamental components: a parsing table, an explicit stack for symbols, and an input buffer for token strings. For YACC-based parsing, the yyparse function serves as the central parser driver executing grammar reductions.",
+    "answer_facts": [
+      "The LL(1) parser uses a parsing table.",
+      "The parser maintains a stack and an input buffer.",
+      "The yyparse function is used in YACC parsing."
+    ]
+  }
+]

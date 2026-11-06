@@ -1,0 +1,531 @@
+{
+  "summary": {
+    "Vector Only": {
+      "avg_recall": 1.0,
+      "avg_fact_score": 0.646,
+      "avg_latency_sec": 4.49
+    },
+    "FTS Only": {
+      "avg_recall": 0.125,
+      "avg_fact_score": 0.125,
+      "avg_latency_sec": 3.2
+    },
+    "Hybrid (RRF)": {
+      "avg_recall": 1.0,
+      "avg_fact_score": 0.688,
+      "avg_latency_sec": 3.04
+    },
+    "Hybrid + Graph": {
+      "avg_recall": 1.0,
+      "avg_fact_score": 0.771,
+      "avg_latency_sec": 10.52
+    }
+  },
+  "results": [
+    {
+      "question_id": "local_0001",
+      "question_type": "multi_hop",
+      "question": "Under the Water (Prevention and Control of Pollution) Act 1974, how is a Joint Board constituted, what are its member offices, and what relationship does it share with the Central Board?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "696f6676-e712-448d-85c0-efd824216fd4",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1",
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "891a5f7b-82fb-480d-9e70-a60b3dabf2b7"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not contain enough information to answer how a Joint Board is constituted, its member offices, or its relationship with the Central Board.\n\nThe excerpts include Section 3 on the Constitution of Central Boards and a list of Chapter II sections (Documents 5 and 1, Chapter II), but they do not describe any Joint Board or its composition/relationship with the Central Board.",
+          "correctness_score": 0.0,
+          "latency_sec": 3.79
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 0.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "I don't have enough information to answer this question. The context provided contains no document excerpts\u2014the \"Context\" section is empty\u2014so I cannot cite any source document or page describing how a Joint Board is constituted under the Water (Prevention and Control of Pollution) Act, 1974, what offices its members hold, or its relationship with the Central Board.\n\nIf you can supply the relevant excerpts (for example, from the Act itself or an internal summary of it), I'll be glad to answer using only that material and cite the document and page numbers.",
+          "correctness_score": 0.0,
+          "latency_sec": 6.27
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "696f6676-e712-448d-85c0-efd824216fd4",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1",
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "891a5f7b-82fb-480d-9e70-a60b3dabf2b7"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not contain enough information to answer this question.\n\nThe excerpts cover only Section 3 (Constitution of Central Boards) of Chapter II of the Water (Prevention and Control of Pollution) Act, 1974 \u2014 specifically the appointment of a Central Board to be called the Central Pollution Control Board and the composition of its membership beginning with clause (2)(a) (a full-time chairman with special knowledge or practical experience in matters relating to environmental protection, nominated by the Central Government) \u2014 together with a chapter table of contents listing Sections 3 through 12 (including 11A, Delegation of powers to Chairman, and 12, Member-secretary and officers and other employees of Board).\n\nThe context says nothing about:\n- How a **Joint Board** is constituted,\n- The **member offices** of a Joint Board, or\n- The **relationship** between a Joint Board and the Central Board.\n\nThe table of contents in Document 1 (Chapter II) lists only the Central Board and State Board provisions and does not list any Joint Board section. Accordingly, I cannot answer the question from the supplied excerpts. (Sources: Document 5, Chapter II, Section 3; Document 1, Chapter II table of contents.)",
+          "correctness_score": 0.0,
+          "latency_sec": 3.55
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "696f6676-e712-448d-85c0-efd824216fd4",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1",
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "891a5f7b-82fb-480d-9e70-a60b3dabf2b7"
+          ],
+          "retrieved_chunk_count": 45,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "Based on the provided excerpts, the context indicates that a **Joint Board** is constituted under **section 13** for **participating States or Union territories**, in connection with an **agreement to constitute a Joint Board**; it also notes that **contiguous States** may enter into such agreements. The excerpts identify a **full-time chairman** as a member/office associated with the Joint Board and refer to a **member-secretary**, stating that **sections 5 to 12** apply to the Joint Board and its member-secretary. *(Source: Water (Prevention and Control of Pollution) Act, 1974 PDF, Chapter II; page number not available in the provided context.)*\n\nHowever, the provided context **does not contain enough information** to describe the full composition/member offices of a Joint Board or any direct relationship between the **Joint Board** and the **Central Board**. The excerpts describe the Central Board\u2019s constitution under section 3, but they do not state how the Joint Board relates to the Central Board.",
+          "correctness_score": 0.67,
+          "latency_sec": 12.94
+        }
+      }
+    },
+    {
+      "question_id": "local_0002",
+      "question_type": "intra_document_reasoning",
+      "question": "What are the powers of the State Government to obtain information and take effluent samples under the Water Act 1974?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does **not** show the **State Government** itself having powers to obtain information or take effluent samples. Those powers are conferred on the **State Board** (or its empowered officers):\n\n- **Section 20 \u2013 Power to obtain information**: The State Board or an empowered officer may make surveys, gauge and record flow/volume and other characteristics of streams or wells, measure rainfall, conduct stream surveys, and require persons abstracting substantial quantities of water or discharging sewage/trade effluent to furnish information. Under **Section 20(3)**, the State Board may also direct a person in charge of an establishment carrying on any industry, operation/process, or treatment and disposal system to furnish information about its construction, installation, operation, disposal system, or extensions/additions.  \n  *Source: Document 14, \u201cPREVENTION AND CONTROL OF WATER POLLUTION,\u201d Section 20.*\n\n- **Section 21 \u2013 Power to take samples of effluents**: The State Board or an officer empowered by it may take, for analysis, samples of water from any stream or well, or samples of sewage or trade effluent passing from any plant/vessel or over any place into such stream or well.  \n  *Source: Document 14, \u201cPREVENTION AND CONTROL OF WATER POLLUTION,\u201d Section 21.*\n\nThe State Government\u2019s role in the provided context is that every State Board is bound by written directions from the Central Board or the State Government in the performance of its functions.  \n*Source: Document 13, \u201cPOWERS AND FUNCTIONS OF BOARDS,\u201d Section 18.*\n\nSo, based only on the context, the State Government does not directly obtain information or take samples; the **State Board** exercises those powers, subject to State Government directions.",
+          "correctness_score": 1.0,
+          "latency_sec": 5.53
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 0.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "I'm sorry, but I can't answer this question. The provided context does not contain any excerpts from the Water Act 1974 (or any other document), so there is no information available about the State Government's powers to obtain information or take effluent samples. Please supply the relevant context excerpts, and I'll answer using only those sources.",
+          "correctness_score": 0.0,
+          "latency_sec": 2.25
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does **not** describe powers of the **State Government** to obtain information or take effluent samples. It describes powers of the **State Board** (and officers empowered by it) under the Water Act provisions:\n\n- **Section 20 \u2013 Power to obtain information:** The State Board or an empowered officer may make surveys of any area; gauge and keep records of flow, volume, and other characteristics of streams or wells; measure and record rainfall; install and maintain gauges or apparatus; carry out stream surveys; and take other necessary steps to obtain required information. The State Board may also direct persons abstracting substantial quantities of water, or discharging sewage/trade effluent into a stream or well, to provide information about the abstraction or discharge at specified times and in a specified form. It may also direct a person in charge of an establishment carrying on any industry, operation, process, treatment and disposal system to furnish information about construction, installation, operation, disposal systems, extensions, or additions, and other prescribed particulars. *(Document 14, \u201cPrevention and Control of Water Pollution,\u201d ss. 20\u201321.)*\n\n- **Section 21 \u2013 Power to take samples of effluents:** The State Board or an officer empowered by it may take samples for analysis of water from any stream or well, or samples of any sewage or trade effluent passing from any plant or vessel, or from or over any place, into such stream or well. *(Document 14, \u201cPrevention and Control of Water Pollution,\u201d s. 21.)*\n\nSo, based **only** on the provided context, these are **State Board** powers, not expressly **State Government** powers.",
+          "correctness_score": 1.0,
+          "latency_sec": 4.36
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"
+          ],
+          "retrieved_chunk_count": 37,
+          "doc_recall": 1.0,
+          "graph_entities_found": [
+            "the_water_(prevention_and_control_of_pollution)_act,_1974.pdf",
+            "State Government",
+            "Government Body",
+            "Its Acts, orders, notifications provable under Section 77.",
+            "the_water_(prevention_and_control_of_pollution)_act,_1974.pdf",
+            "State Government",
+            "Government Body",
+            "Its Acts, orders, notifications provable under Section 77."
+          ],
+          "graph_hit": true,
+          "generated_answer": "Based on the provided excerpts, the powers to obtain information and take effluent samples are conferred on the **State Board**, not directly on the **State Government**.\n\n- **Obtaining information \u2014 Section 20:** The State Board or an empowered officer may make surveys, gauge and keep records of stream/well flow or volume and other characteristics, measure rainfall, install apparatus, carry out stream surveys, and take other necessary steps to obtain required information. The Board may also direct persons abstracting substantial quantities of water or discharging sewage/trade effluent to provide specified information. Under the inserted sub-section (3), the Board may direct a person in charge of an establishment carrying on any industry, operation or process, or treatment and disposal system, to furnish information about its construction, installation, operation, disposal system, or extension/addition.  \n  *Source: Document 14 \u2014 PREVENTION AND CONTROL OF WATER POLLUTION, Section 20.*\n\n- **Taking effluent samples \u2014 Section 21:** The State Board or an officer empowered by it may take samples of water from any stream or well, or samples of sewage or trade effluent passing from any plant or vessel or over any place into such stream or well, for analysis.  \n  *Source: Document 14 \u2014 PREVENTION AND CONTROL OF WATER POLLUTION, Section 21.*\n\nThe State Government\u2019s role shown in the excerpts is that every State Board is bound by written directions of the Central Board or the State Government in performing its functions under the Act.  \n*Source: Document 13 \u2014 POWERS AND FUNCTIONS OF BOARDS, Section 18.*\n\nSo, the context does **not** show the State Government itself possessing direct powers to obtain information or take effluent samples; those powers are given to the State Board/empowered officers.",
+          "correctness_score": 1.0,
+          "latency_sec": 10.29
+        }
+      }
+    },
+    {
+      "question_id": "local_0003",
+      "question_type": "multi_hop",
+      "question": "Under the Bharatiya Sakshya Adhiniyam 2023 (Act 47 of 2023), how is Chapter II Relevancy of Facts structured regarding admissions and statements by persons who cannot be called as witnesses?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "e71732c3-e9f3-4f13-a7da-2d90d4f586fa",
+            "71f712f8-2a0a-4617-9c1c-82b6b8b58b67"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "## Structure shown in the excerpts\n\nBased only on the table-of-contents excerpt and the section text provided, the relevancy provisions are organized as follows:\n\n**1. Admissions (concluding at Section 25)**\n- **Section 15 \u2013 \"Admission defined\"**: an admission is a statement, oral or documentary or contained in electronic form, which suggests any inference as to any fact in issue or relevant fact, made by the persons and under the circumstances mentioned in the Act. The excerpt notes it corresponds to S. 17 of Act 1 of 1872 (Document 27).\n- The admissions group closes with **Section 25 \u2013 \"Admissions not conclusive proof, but may estop\"** (Document 2, p. 3).\n\n**2. \"Statements by persons who cannot be called as witnesses\"**\nThis sub-heading opens a new group beginning with:\n- **Section 26** \u2013 cases in which a statement of a relevant fact by a person who is dead or cannot be found, etc., is relevant;\n- **Section 27** \u2013 relevancy of certain evidence for proving, in a subsequent proceeding, the truth of facts therein stated (Document 2, p. 3).\n\n**3. \"Statements made under special circumstances\"**\nImmediately following Section 27, this sub-heading covers:\n- **Section 28** \u2013 entries in books of account when relevant;\n- **Section 29** \u2013 relevancy of entry in public record or an electronic record made in performance of duty;\n- **Section 30** \u2013 relevancy of statements in maps, charts and plans;\n- **Section 31** \u2013 relevancy of statement as to a fact of public nature contained in certain Acts or notifications;\n- **Section 32** \u2013 relevancy of statements as to any law contained in law books, including electronic or digital form (Document 2, p. 3).\n- A further heading, **\"How much of a statement is to be proved,\"** follows Section 32 (Document 2, p. 3).\n\n**Limitation:** the excerpts are partial. They do not show the chapter's opening provisions or confirm whether these sub-headings are formally numbered divisions within the chapter; the arrangement above reflects the headings and section sequence as printed in the provided pages.",
+          "correctness_score": 0.67,
+          "latency_sec": 8.97
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 0.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not include any excerpts from the Bharatiya Sakshya Adhiniyam 2023 or any source document/page information. Therefore, I cannot answer how Chapter II (Relevancy of Facts) is structured regarding admissions and statements by persons who cannot be called as witnesses. Please provide the relevant document excerpts.",
+          "correctness_score": 0.0,
+          "latency_sec": 3.56
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "e71732c3-e9f3-4f13-a7da-2d90d4f586fa",
+            "71f712f8-2a0a-4617-9c1c-82b6b8b58b67"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "Based on the excerpts, the structure shown for **Chapter II \u2013 Relevancy of Facts** is:\n\n- **Admissions** are dealt with in this chapter: **Section 15** defines an admission as a statement\u2014oral, documentary, or in electronic form\u2014suggesting an inference as to a fact in issue or relevant fact, made by specified persons under specified circumstances. **Section 25** is titled **\u201cAdmissions not conclusive proof, but may estop.\u201d** *(Document 27; Document 2, p. 3)*\n\n- A distinct heading, **\u201cStatements by persons who cannot be called as witnesses,\u201d** begins with:\n  - **Section 26** \u2013 cases in which a statement of a relevant fact by a person who is dead or cannot be found, etc., is relevant;\n  - **Section 27** \u2013 relevancy of certain evidence for proving, in a subsequent proceeding, the truth of facts stated therein. *(Document 2, p. 3)*\n\n- The excerpts then show a heading **\u201cStatements made under special circumstances,\u201d** covering Sections 28\u201332, including entries in books of account, public/electronic records made in performance of duty, statements in maps/charts/plans, statements as to facts of a public nature in Acts/notifications, and statements as to law in law books including electronic/digital form. *(Document 2, p. 3)*\n\nThe excerpts do not reproduce the full text of Chapter II, but they show this sequence: admissions (including s. 15 and s. 25), then statements by persons who cannot be called as witnesses (ss. 26\u201327), then statements made under special circumstances (ss. 28\u201332).",
+          "correctness_score": 1.0,
+          "latency_sec": 5.62
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "e71732c3-e9f3-4f13-a7da-2d90d4f586fa",
+            "71f712f8-2a0a-4617-9c1c-82b6b8b58b67"
+          ],
+          "retrieved_chunk_count": 45,
+          "doc_recall": 1.0,
+          "graph_entities_found": [
+            "BSA BA.pdf",
+            "Admission",
+            "Concept",
+            "Statement suggesting inference as to fact in issue or relevant fact.",
+            "BSA BA.pdf",
+            "Admissions",
+            "Concept",
+            "Statements treated as admissions under evidence law."
+          ],
+          "graph_hit": true,
+          "generated_answer": "Based on the provided excerpts, **Chapter II (\u201cRelevancy of Facts\u201d) separates admissions from statements by persons who cannot be called as witnesses**:\n\n- **Admissions**: Section 15 defines an \u201cadmission\u201d as a statement\u2014oral, documentary, or in electronic form\u2014suggesting an inference as to a fact in issue or relevant fact. Section 25 then provides that \u201cAdmissions [are] not conclusive proof, but may estop.\u201d *(Document 27; Document 2, p. 3)*\n- **Statements by persons who cannot be called as witnesses**: This appears as a distinct sub-heading, beginning with **Section 26** (\u201cCases in which statement of relevant fact by person who is dead or cannot be found, etc., is relevant\u201d) and **Section 27** (\u201cRelevancy of Certain evidence for proving, in subsequent proceeding, truth of facts therein stated\u201d). *(Document 2, p. 3)*\n- The excerpt then shows a further sub-heading, **\u201cStatements made under special circumstances,\u201d** covering Sections 28\u201332, followed by **\u201cHow much of a statement is to be proved.\u201d** *(Document 2, p. 3)*\n\nSo, in the structure shown, **admissions are dealt with earlier (Sections 15 and 25), while statements by unavailable witnesses form a separate group beginning at Section 26**. The excerpts do not provide the full text or complete arrangement of Chapter II beyond this.",
+          "correctness_score": 1.0,
+          "latency_sec": 18.09
+        }
+      }
+    },
+    {
+      "question_id": "local_0004",
+      "question_type": "basic",
+      "question": "Under Section 139 of the Bharatiya Sakshya Adhiniyam, how many witnesses are required to prove any fact?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "e71732c3-e9f3-4f13-a7da-2d90d4f586fa",
+            "71f712f8-2a0a-4617-9c1c-82b6b8b58b67"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not include Section 139 of the Bharatiya Sakshya Adhiniyam, so I cannot determine from these excerpts how many witnesses are required to prove a fact. The excerpts only cover preliminary provisions, Section 170 (repeal and savings), and the Schedule certificate format.",
+          "correctness_score": 0.0,
+          "latency_sec": 2.72
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 0.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context contains no document excerpts, so I cannot answer this question from the available information. I don't have any text from the Bharatiya Sakshya Adhiniyam (or any other source) in the context supplied, and I'm not able to rely on outside knowledge to fill the gap.\n\nIf you can supply the relevant excerpt(s) \u2014 including the document name and page number \u2014 I'll be happy to tell you what Section 139 provides regarding the number of witnesses required to prove a fact.",
+          "correctness_score": 0.0,
+          "latency_sec": 4.33
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "e71732c3-e9f3-4f13-a7da-2d90d4f586fa",
+            "71f712f8-2a0a-4617-9c1c-82b6b8b58b67"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not include Section 139 of the Bharatiya Sakshya Adhiniyam, 2023, so I cannot determine from these excerpts how many witnesses are required to prove a fact.\n\nThe excerpts available cover only:\n- Preliminary provisions (short title, application and commencement) \u2014 [Document 12]\n- Repeal and savings (Section 170) and a reference to the Act's short title/date \u2014 [Documents 10 and 95]\n- The Schedule certificate format under Section 63(4)(c) \u2014 [Document 95]\n\nNone of these address witness requirements under Section 139. To answer confidently, the relevant text of Section 139 (or its corresponding provision) would need to be included in the context.",
+          "correctness_score": 0.0,
+          "latency_sec": 2.11
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "e71732c3-e9f3-4f13-a7da-2d90d4f586fa",
+            "71f712f8-2a0a-4617-9c1c-82b6b8b58b67"
+          ],
+          "retrieved_chunk_count": 26,
+          "doc_recall": 1.0,
+          "graph_entities_found": [
+            "BSA BA.pdf",
+            "Number of witnesses",
+            "Section 139 of the evidence law."
+          ],
+          "graph_hit": true,
+          "generated_answer": "The provided context does not include the text of Section 139 of the Bharatiya Sakshya Adhiniyam, so I cannot determine how many witnesses are required to prove any fact.",
+          "correctness_score": 0.0,
+          "latency_sec": 5.77
+        }
+      }
+    },
+    {
+      "question_id": "local_0005",
+      "question_type": "multi_hop",
+      "question": "How does the BullyAlgorithm handle a scenario where a leader node fails in the distributed system?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "6caf74ba-59dd-47e6-9dce-d6d91fa26186",
+            "e794c264-8963-4d34-90e4-5eddc1afeca5"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "When the failed node is the current leader, `fail_node` removes it from the active list, prints that the leader has failed, and starts a new election. If other active nodes remain, it calls `election(max(self.active))`; under the Bully election logic, the highest active node becomes leader. If no active nodes remain, it sets `leader = None` and reports that no active nodes are available.\n\nSource: Document 2, \u201cPractical 11\u201d (page number not available in the provided excerpt); election behavior also supported by Document 1, \u201cPractical 11.\u201d",
+          "correctness_score": 1.0,
+          "latency_sec": 4.32
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 0.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "I don't have enough information to answer this question. The provided context contains no document excerpts \u2014 no source documents or page numbers were supplied for me to draw from.\n\nSince I'm restricted to answering only from the provided context, I can't describe how the Bully Algorithm handles leader failure. If you can supply the relevant company document excerpts (or confirm which document and pages discuss the Bully Algorithm), I'll be happy to answer with proper citations.",
+          "correctness_score": 0.0,
+          "latency_sec": 2.47
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "6caf74ba-59dd-47e6-9dce-d6d91fa26186",
+            "e794c264-8963-4d34-90e4-5eddc1afeca5"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "When the leader fails, `fail_node(node)` removes that node from the active list and checks whether the failed node is the current leader. If it is, the algorithm prints \u201cLeader failed. Starting election.\u201d and, if active nodes remain, calls `election(max(self.active))`; otherwise it sets `leader = None` and reports that no active nodes are available. In `election(node)`, if no active node has a higher ID, that node becomes leader; otherwise the highest active node becomes leader. In the example, node 5 is leader, `fail_node(5)` removes it, and `election(4)` makes node 4 the new leader because no higher active node remains.  \nSource: Document 1, Practical 11; Document 2, Practical 11.",
+          "correctness_score": 1.0,
+          "latency_sec": 2.25
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "6caf74ba-59dd-47e6-9dce-d6d91fa26186",
+            "e794c264-8963-4d34-90e4-5eddc1afeca5"
+          ],
+          "retrieved_chunk_count": 33,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "When a leader fails, `fail_node(node)` removes that node from the active list. If the failed node is the current leader, it prints that the leader failed and starts an election by calling `self.election(max(self.active))`. If there are no active nodes left, it sets `self.leader = None` and reports that no active nodes are available. Because `election` elects the highest active node as leader, the highest remaining active node becomes the new leader. The example code demonstrates this by failing node `5`, which is the current leader, and then showing the updated status. [Document 2 | Practical 11; Document 1 | Practical 11]",
+          "correctness_score": 1.0,
+          "latency_sec": 14.71
+        }
+      }
+    },
+    {
+      "question_id": "local_0006",
+      "question_type": "semantic",
+      "question": "What grammar and parsing technique is demonstrated in Practical 10 of the compiler lab using C?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "cfd0f7cd-9aa0-4e6d-b3b6-a2ebd68d5005"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "Practical 10 demonstrates **operator precedence parsing**, implemented as a **C program**. The provided context does not specify a particular grammar used in that practical.  \nSource: Document 29, \u201cPractical 10.\u201d",
+          "correctness_score": 0.5,
+          "latency_sec": 4.93
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 0.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "I don't have enough information to answer this question. The context provided contains no excerpts from any company document\u2014there is no compiler lab manual, no Practical 10 description, and no C code or grammar/parsing details available to me.\n\nTo answer reliably, I would need the relevant page(s) from the compiler lab document covering Practical 10. Please provide those excerpts, and I'll identify the grammar and parsing technique demonstrated and cite the document and page number.",
+          "correctness_score": 0.0,
+          "latency_sec": 2.44
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "cfd0f7cd-9aa0-4e6d-b3b6-a2ebd68d5005"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "Practical 10 demonstrates **operator precedence parsing** implemented in C. The provided context does not specify a particular grammar for that practical.  \nSource: Document 29, \u201cPractical 10\u201d (page number not available).",
+          "correctness_score": 0.5,
+          "latency_sec": 1.72
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "cfd0f7cd-9aa0-4e6d-b3b6-a2ebd68d5005"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "Practical 10 demonstrates a C program implementing **operator precedence parsing** (Document 29, Practical 10). The provided context does **not** specify the particular grammar used.",
+          "correctness_score": 0.5,
+          "latency_sec": 7.72
+        }
+      }
+    },
+    {
+      "question_id": "local_0007",
+      "question_type": "info_not_found",
+      "question": "What is the EBITDA margin and quarterly revenue growth reported by Redwood Inference for Q3 2024?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not contain any information about Redwood Inference, its EBITDA margin, or quarterly revenue growth for Q3 2024. The excerpts are from documents concerning water pollution prevention and control (Document 15) and funds, accounts, and audit provisions (Document 22), and they make no reference to that company or to any such financial metrics. I therefore cannot answer the question from the available context.",
+          "correctness_score": 1.0,
+          "latency_sec": 2.42
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "I don't have enough information to answer this question. The context provided contains no document excerpts, so I cannot verify any EBITDA margin or quarterly revenue growth figures for Redwood Inference's Q3 2024 \u2014 and I shouldn't speculate or draw on outside knowledge. If you can supply the relevant document excerpts (e.g., the earnings release or financial statements with page numbers), I'll pull the figures from them.",
+          "correctness_score": 1.0,
+          "latency_sec": 2.02
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not contain any information about Redwood Inference, EBITDA margins, or quarterly revenue growth for Q3 2024. The excerpts are from the Prevention and Control of Water Pollution Act (covering sample analysis costs and recovery provisions) and a document on Funds, Accounts and Audit (covering budget preparation and annual report requirements for the Central and State Boards).\n\nI cannot answer this question using only the provided context.",
+          "correctness_score": 1.0,
+          "latency_sec": 1.35
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "f235bffd-fadc-497a-97e2-26b9bb955c65",
+            "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "The provided context does not contain any information about Redwood Inference, its EBITDA margin, or its quarterly revenue growth for Q3 2024. The excerpts are from documents concerning water pollution prevention/control and board funds, accounts, and audit provisions. Therefore, I cannot answer the question from the provided context.",
+          "correctness_score": 1.0,
+          "latency_sec": 5.66
+        }
+      }
+    },
+    {
+      "question_id": "local_0008",
+      "question_type": "basic",
+      "question": "How is Lamport's logical clock algorithm implemented and updated during an event?",
+      "modes": {
+        "vector_only": {
+          "mode": "Vector Only",
+          "retrieved_doc_ids": [
+            "6caf74ba-59dd-47e6-9dce-d6d91fa26186",
+            "e794c264-8963-4d34-90e4-5eddc1afeca5"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "In the provided context, Lamport\u2019s logical clock algorithm is implemented in Document 5, \u201cImplement Lamport\u2019s clock synchronization algorithm\u201d (no page number provided), as a `Process` class:\n\n- Each process is initialized with a process ID and a logical `clock = 0`.\n- On a regular **event**, the process increments its clock by 1 and prints the event and clock value.\n- On **sending a message**, the process increments its clock by 1, prints the send event, and returns the current clock value.\n- On **receiving a message**, the process updates its clock using `max(self.clock, received_time) + 1`, then prints the receive event and clock value.\n\nThe example creates two processes and demonstrates events, sending, and receiving messages between them. The context does not include the generated output.",
+          "correctness_score": 1.0,
+          "latency_sec": 3.21
+        },
+        "fts_only": {
+          "mode": "FTS Only",
+          "retrieved_doc_ids": [],
+          "retrieved_chunk_count": 0,
+          "doc_recall": 0.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "I don't have enough information to answer this question. The context provided contains no document excerpts\u2014there is no text, source document, or page reference for me to draw from.\n\nTo answer how Lamport's logical clock algorithm is implemented and updated during an event, I would need the relevant passage(s) from your company documents. If you can supply the excerpt or confirm which document and page covers this topic, I'll answer using only that content and cite it appropriately.",
+          "correctness_score": 0.0,
+          "latency_sec": 2.26
+        },
+        "hybrid_rrf": {
+          "mode": "Hybrid (RRF)",
+          "retrieved_doc_ids": [
+            "6caf74ba-59dd-47e6-9dce-d6d91fa26186",
+            "e794c264-8963-4d34-90e4-5eddc1afeca5"
+          ],
+          "retrieved_chunk_count": 25,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "## Lamport Logical Clock Implementation (Document 5, \"Implement Lamport's clock synchronization algorithm\")\n\n**Data structure.** The algorithm is implemented as a `Process` class in `lampart_clock.py`. Each process stores two fields on initialization: a process identifier (`self.pid = pid`) and a logical counter initialized to zero (`self.clock = 0`).\n\n**Updates during an event.** The three operations update the clock as follows:\n\n| Operation | Update rule | What it prints |\n|---|---|---|\n| `event()` | `self.clock += 1` \u2014 increments the counter by one for any local/internal event. | `Process {pid}: Event, Clock = {clock}` |\n| `send_message()` | `self.clock += 1` \u2014 increments the counter, then **returns** the current clock value so it can be attached to the outgoing message. | `Process {pid}: Sending message, Clock = {clock}` |\n| `receive_message(received_time)` | `self.clock = max(self.clock, received_time) + 1` \u2014 takes the larger of its own clock and the timestamp carried by the incoming message, then increments by one. | `Process {pid}: Received message, Clock = {clock}` |\n\nSo the essential rule shown in the code is: local and send events simply increment the counter, while a receive event synchronizes the counter by taking the maximum of the local value and the message's timestamp, plus one.\n\n**Worked example in the document.** Two processes are created, `p1 = Process(1)` and `p2 = Process(2)`, and the scenario runs:\n1. `p1.event()` twice (two local increments).\n2. `p1.send_message()`, whose return value is stored in `message_time`.\n3. `p2.receive_message(message_time)` \u2014 p2 applies the `max(...) + 1` rule against p1's timestamp.\n4. `p2.event()` (one local increment).\n5. `p2.send_message()`, again storing the timestamp in `message_time`.\n6. `p1.receive_message(message_time)` \u2014 p1 applies the `max(...) + 1` rule against p2's timestamp.\n\nNote: the excerpt gives the code and the invocation sequence but the labeled \"Output:\" section is empty in the provided context, so I cannot report the actual printed clock values or the final counter values.\n\n*Source: Document 5, \"Implement Lamport's clock synchronization algorithm\" (no page number given in the context).*",
+          "correctness_score": 1.0,
+          "latency_sec": 3.37
+        },
+        "hybrid_graph": {
+          "mode": "Hybrid + Graph",
+          "retrieved_doc_ids": [
+            "6caf74ba-59dd-47e6-9dce-d6d91fa26186",
+            "e794c264-8963-4d34-90e4-5eddc1afeca5"
+          ],
+          "retrieved_chunk_count": 26,
+          "doc_recall": 1.0,
+          "graph_entities_found": [],
+          "graph_hit": false,
+          "generated_answer": "Based on Document 5 (\"Implement Lamport's clock synchronization algorithm\"), the algorithm is implemented as a `Process` class, where each process keeps a process ID and a logical clock counter:\n\n- **Initialization:** Each `Process` is created with a `pid`, and its clock is initialized to `0`.\n- **Regular event:** The `event()` method increments the clock by 1 (`self.clock += 1`) and prints the process ID and new clock value.\n- **Sending a message:** `send_message()` also increments the clock by 1 and returns the updated clock value, which is sent along with the message.\n- **Receiving a message:** `receive_message(received_time)` updates the clock using `self.clock = max(self.clock, received_time) + 1` \u2014 i.e., it takes the maximum of its own clock and the timestamp carried by the incoming message, then increments by one. The new clock value is printed.\n\nThe document also shows a usage example: two processes (`p1 = Process(1)`, `p2 = Process(2)`) perform local events, exchange messages, and each message carries the sender's clock value into the receiver's update rule.\n\n**Source:** Document 5, *Implement Lamport's clock synchronization algorithm* (no page number provided in the excerpt).",
+          "correctness_score": 1.0,
+          "latency_sec": 8.97
+        }
+      }
+    }
+  ]
+}

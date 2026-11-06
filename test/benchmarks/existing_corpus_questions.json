@@ -1,0 +1,108 @@
+[
+  {
+    "question_id": "local_0001",
+    "question_type": "multi_hop",
+    "source_types": ["legislation", "pdf"],
+    "question": "Under the Water (Prevention and Control of Pollution) Act 1974, how is a Joint Board constituted, what are its member offices, and what relationship does it share with the Central Board?",
+    "expected_doc_ids": ["696f6676-e712-448d-85c0-efd824216fd4", "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"],
+    "expected_entities": ["Joint Board", "Central Board", "State Board", "Chairman", "Member-secretary"],
+    "gold_answer": "Under Section 13 of the Water Act 1974, a Joint Board is constituted for participating States or Union territories. The Board includes offices such as the Chairman (head of the Board) and Member-secretary. The Central Board functions as a coordinating authority bound by Central Government directions and can perform State Board functions.",
+    "answer_facts": [
+      "A Joint Board is constituted under Section 13 for participating States or Union territories.",
+      "The Board consists of key officers including the Chairman and Member-secretary.",
+      "The Central Board is bound by Central Government directions and may perform State Board functions."
+    ]
+  },
+  {
+    "question_id": "local_0002",
+    "question_type": "intra_document_reasoning",
+    "source_types": ["legislation", "pdf"],
+    "question": "What are the powers of the State Government to obtain information and take effluent samples under the Water Act 1974?",
+    "expected_doc_ids": ["696f6676-e712-448d-85c0-efd824216fd4", "f4ebd9ec-7c73-4cd1-be27-9a82cc59f5b1"],
+    "expected_entities": ["State Government", "State Board", "Central Board"],
+    "gold_answer": "Under the Water Act 1974, Section 20 provides the power to obtain information, and Section 21 specifies the power to take samples of effluents and the procedures to be followed in connection with sample collection and analysis.",
+    "answer_facts": [
+      "Section 20 grants the power to obtain information.",
+      "Section 21 grants the power to take samples of effluents."
+    ]
+  },
+  {
+    "question_id": "local_0003",
+    "question_type": "multi_hop",
+    "source_types": ["evidence_act", "pdf"],
+    "question": "Under the Bharatiya Sakshya Adhiniyam 2023 (Act 47 of 2023), how is Chapter II Relevancy of Facts structured regarding admissions and statements by persons who cannot be called as witnesses?",
+    "expected_doc_ids": ["e71732c3-e9f3-4f13-a7da-2d90d4f586fa"],
+    "expected_entities": ["CHAPTER II RELEVANCY OF FACTS", "Admission", "Confession", "Section 25"],
+    "gold_answer": "Chapter II of Act 47 of 2023 covers the relevancy of facts. It details admissions (Section 25 explains admissions are not conclusive proof but may estop) and covers statements made by persons who cannot be called as witnesses (Section 26), connecting facts in issue with permissible oral and documentary evidence.",
+    "answer_facts": [
+      "Chapter II covers Relevancy of Facts under Act 47 of 2023.",
+      "Section 25 states admissions are not conclusive proof but may estop.",
+      "Section 26 covers statements by persons who cannot be called as witnesses."
+    ]
+  },
+  {
+    "question_id": "local_0004",
+    "question_type": "basic",
+    "source_types": ["evidence_act", "pdf"],
+    "question": "Under Section 139 of the Bharatiya Sakshya Adhiniyam, how many witnesses are required to prove any fact?",
+    "expected_doc_ids": ["e71732c3-e9f3-4f13-a7da-2d90d4f586fa"],
+    "expected_entities": ["Section 139", "Number of witnesses"],
+    "gold_answer": "Under Section 139 of BSA, no particular number of witnesses shall in any case be required for the proof of any fact.",
+    "answer_facts": [
+      "No particular number of witnesses is required for the proof of any fact under Section 139."
+    ]
+  },
+  {
+    "question_id": "local_0005",
+    "question_type": "multi_hop",
+    "source_types": ["distributed_systems", "pdf"],
+    "question": "How does the BullyAlgorithm handle a scenario where a leader node fails in the distributed system?",
+    "expected_doc_ids": ["6caf74ba-59dd-47e6-9dce-d6d91fa26186"],
+    "expected_entities": ["BullyAlgorithm", "leader election", "distributed system", "active nodes", "leader"],
+    "gold_answer": "In the BullyAlgorithm implementation, when a node fails via fail_node(), it is removed from the active nodes set. If the failed node was the current leader, an election method is triggered among remaining active nodes where the node with the highest process ID (highest priority) bullies smaller nodes and is elected as the new leader.",
+    "answer_facts": [
+      "The failed node is removed from active nodes.",
+      "If the leader fails, a new leader election is initiated.",
+      "The node with the highest ID among active nodes becomes the new leader."
+    ]
+  },
+  {
+    "question_id": "local_0006",
+    "question_type": "semantic",
+    "source_types": ["compiler_design", "pdf"],
+    "question": "What grammar and parsing technique is demonstrated in Practical 10 of the compiler lab using C?",
+    "expected_doc_ids": ["cfd0f7cd-9aa0-4e6d-b3b6-a2ebd68d5005"],
+    "expected_entities": ["C", "stdio.h", "Operator precedence parsing"],
+    "gold_answer": "Practical 10 implements an operator precedence parser in C using an explicit stack and input buffer, evaluating precedence relationships for arithmetic expressions with terminals like '+', '*', and identifiers.",
+    "answer_facts": [
+      "Practical 10 implements operator precedence parsing.",
+      "The program is written in C using stack and input arrays."
+    ]
+  },
+  {
+    "question_id": "local_0007",
+    "question_type": "info_not_found",
+    "source_types": ["corporate", "finance"],
+    "question": "What is the EBITDA margin and quarterly revenue growth reported by Redwood Inference for Q3 2024?",
+    "expected_doc_ids": [],
+    "expected_entities": [],
+    "gold_answer": "The provided documents do not contain any financial records, EBITDA margins, or quarterly reports for Redwood Inference.",
+    "answer_facts": [
+      "The information is not available in the corpus.",
+      "No financial figures or EBITDA margins are stated."
+    ]
+  },
+  {
+    "question_id": "local_0008",
+    "question_type": "basic",
+    "source_types": ["distributed_systems", "pdf"],
+    "question": "How is Lamport's logical clock algorithm implemented and updated during an event?",
+    "expected_doc_ids": ["6caf74ba-59dd-47e6-9dce-d6d91fa26186"],
+    "expected_entities": ["Lamport", "Process", "clock"],
+    "gold_answer": "Lamport's clock algorithm is implemented with a Process class initialized with a pid and a clock set to 0. When an internal event occurs via event(), the clock is incremented by 1 (self.clock += 1).",
+    "answer_facts": [
+      "The Process class maintains a clock initialized to 0.",
+      "On an event, the clock is incremented by 1."
+    ]
+  }
+]
